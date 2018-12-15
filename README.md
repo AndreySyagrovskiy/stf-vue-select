@@ -166,6 +166,10 @@ props: {
 },
 
 ```
+- needFocusInpOnTab - This property changes behaviour of select when focus comes to it on TAB key pressing. If we have true value then focus will be on input else focus will be on select and for focusing input we should press ENTER key.
+- optionsWrapClass - is class which will be added to options' container. We need it cause options are not rendered in the select's element but out and styling by parent class is not accessible. Why are options out of the parent element? - Cause we have a situation when some element can have style overflow hidden and in this case, if options are in such container it will be hidden. That is why we just add options to the bottom of the body and set a position of this element near to the select's container.
+- more - property activates a function which watches the scroll and asks more components from parent component by this.$emit('loadMore', {}); event
+- pending - just says don`t ask me more I process your request
 
 
 For detailed explanation on how things work, checkout the [DEMO](https://stfalcon-studio.github.io/stf-vue-select/dist/)
